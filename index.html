@@ -13,7 +13,7 @@
         <p>{{frutas[2] + ' e ' + frutas[1]}}</p>
         <p>Aluno: {{aluno.nome}}</p>
         <p>{{1 + num1}}</p>
-        <p>{{fun()}}</p>
+        <p>{{metodo(1)}}</p>
     </div>
 
 
@@ -28,12 +28,13 @@
                 msg: 'teste',
                 frutas: ['banana', 'maça', 'Pera'],
                 aluno: { nome: 'Lufe'},
-                num1: 1,
-                fun: function(){
-                    return 'Retornando mensagens'
+                num1: 1
+            },
+            methods: {
+                metodo(i){
+                    return 'Frutas ' + this.frutas[i]
                 }
-
-            }            
+            }        
         })
     </script>
 
